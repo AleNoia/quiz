@@ -1,0 +1,35 @@
+// ======================================== [IMPORTS]
+@import '../colors';
+
+// ======================================== [SCROLL]
+// ========== [TYPE 1]
+@mixin scroll-1() {
+  &::-webkit-scrollbar {
+    width: .5em;
+  }
+  
+  &::-webkit-scrollbar-track {
+    border-radius: .7em;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-image: $gradient-1;
+    cursor: pointer;
+  }
+}
+
+// ========== [TYPE 2]
+@mixin scroll-2() {
+  &::-webkit-scrollbar {
+    width: 17px;
+    padding: 20px 0;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-2;
+    cursor: pointer;
+    border-radius: .7em;
+    border: 5px solid transparent;
+    background-clip: padding-box;  
+  }
+}

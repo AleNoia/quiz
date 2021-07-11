@@ -1,0 +1,85 @@
+// ======================================== IMPORTS
+@import './colors';
+@import './shadow';
+@import './transition';
+@import './isFlex';
+
+// ======================================== Default
+#app {
+    min-height: 100vh;
+    width: 100%;
+    background-color: $color-2;
+}
+
+body {
+    color: $color-4 !important;
+}
+
+.card {
+    border: none !important;
+    border-radius: 10px !important;
+    box-shadow: $shadow-2;
+    padding: 1em 1.5em;
+}
+
+// ======================================== Question
+@mixin hoverAnswer {
+    background-image: $gradient-1 !important;
+    color: white !important;
+
+    span {
+        background-color: $color-3;
+        box-shadow: $shadow-5;
+    }
+}
+.question {
+    font-size: 21px;
+}
+
+.header {
+    opacity: .75;
+
+    span {
+        opacity: .9;
+        font-weight: bold;
+    }
+}
+.answers {
+    input[type="radio"]:checked+.answer {
+        @include hoverAnswer;
+    }
+}
+
+.answer {
+    @include is-flex(center, left);
+    height: max-content;
+    min-width: 70%;
+    padding: 13px 15px;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    transition: $transition-1;
+    text-align: left;
+    color: $color-4;
+    background-color: white;
+
+    p {
+        margin: 0;
+    }
+
+    span {
+        padding: 7px 14px;
+        border-radius: 20px;
+        background-color: $color-2;
+        font-weight: bold;
+        opacity: .9;
+        font-size: 18px;
+    }
+
+    &:hover {
+        @include hoverAnswer;
+    }
+}
+
+.buttonGroup {
+    @include is-flex(center, center)
+}

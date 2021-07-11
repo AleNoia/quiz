@@ -10,7 +10,7 @@
     cursor: pointer;
     font-size: 14px;
     border: none;
-    border-radius: 7px; 
+    border-radius: 10px;
     transition: $transition-1;
     background-color: hsl(0, 0%, 100%);
     box-shadow: $shadow-1;
@@ -19,35 +19,25 @@
     i {
         color: hsl(0, 0%, 100%) !important;
     }
+}
+
+.answerBtn {
+    background-image: $gradient-1;
+    border: none !important;
+    box-shadow: $shadow-2 !important;
 
     &:hover {
-        transform: scale(0.97);
-    }
-
-    &:active {
-        transform: scale(0.85);
+        background-image: $gradient-2 !important;
     }
 }
 
-// ========== [PRIMARY]
-.btn-primary {
-    background-image: $color-primary;
-}
+.btn-outline-primary {
+    border-image: $gradient-1 !important;
+    border-image-slice: 1 !important;
 
-// ========== [SECONDARY]
-.btn-secondary {
-    background-image: $color-secondary;
-    color: #343a40;
-}
-
-// ========== [SUCCESS]
-.btn-success {
-    background-image: $color-success;
-}
-
-// ========== [DANGER]
-.btn-danger {
-    background-image: $color-danger;
+    &:hover {
+        background-image: $gradient-1 !important;
+    }
 }
 
 // ========== [TO UP]

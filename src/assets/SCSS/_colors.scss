@@ -1,10 +1,12 @@
 // ======================================== [COLORS PROJECT]
-$color-1: #0096c7;
-$color-2: #007AB8;
+$color-1: #0FD9DE;
+$color-2: #CDF7F0;
+$color-3: #01C6CA;
+$color-4: #3D5170;
 
 // ======================================== [GRADIENT PROJECT]
-$gradient-1: linear-gradient(to left top, #8ff8ff, #97f6ff, #a0f4ff, #a8f1ff, #b0efff);
-$gradient-2: linear-gradient(to left top, #0077b6, #008cc4, #06a1d0, #2ab5db, #48cae4);
+$gradient-1: linear-gradient(to left top, #43ced1, #39c5c8, #2ebbbe, #22b2b5, #11a9ac);
+$gradient-2: linear-gradient(to left bottom, #43ced1, #39c5c8, #2ebbbe, #22b2b5, #11a9ac);
 $gradient-border-1: linear-gradient(to right bottom, hsla(0, 0%, 100%, 0), hsl(0, 0%, 100%)) 1;
 $gradient-border-2: linear-gradient(to left top, #9EF5FF, #23B1D9) 1;
 

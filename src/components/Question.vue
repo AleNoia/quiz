@@ -1,9 +1,9 @@
 <template>
 
-    <b-card>
+    <b-card class="cardQuestion">
 
         <b-card-text class="header">
-            Question <span>{{ questionIndex }}</span> • <span>{{ remaining }}</span> remaining
+            Question <span>{{ questionIndex }}</span> • <span>{{ remaining - 1 }}</span> remaining
         </b-card-text>
 
         <b-card-text class="question">
@@ -25,10 +25,10 @@
         </b-card-text>
 
         <div class="buttonGroup">
-            <b-button variant="outline-primary" class="mr-1" @click="answerLater" :disabled="questionIndex === 11">
+            <b-button variant="outline-primary" class="mr-1" @click="answerLater" :disabled="remaining === 0">
                 Answer Later
             </b-button>
-            <b-button class="answerBtn" @click="answer" :disabled="questionIndex === 11">Answer</b-button>
+            <b-button class="answerBtn" @click="answer" :disabled="remaining === 0">Answer</b-button>
         </div>
 
     </b-card>
@@ -109,6 +109,7 @@
         created() {
             this.generateQuestion(); // Generating question on startup
             this.remaining = this.arrayQuestions.length
+            eventBus.$emit('dataQuestions', this.arrayQuestions.length)
         },
 
         watch: {

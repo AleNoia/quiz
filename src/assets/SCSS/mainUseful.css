@@ -69,9 +69,9 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -666,9 +666,90 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.is-flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+footer {
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 3em;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+  margin-top: 6%;
+}
+
+footer span {
+  color: white;
+}
+
+footer span {
+  margin-left: .4em;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-bottom: 1.2em;
+}
+
+footer .footer-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.is-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -693,6 +774,7 @@ table {
 #app {
   min-height: 100vh;
   width: 100%;
+  position: relative;
   background-color: #CDF7F0;
 }
 
@@ -706,6 +788,41 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
           box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
   padding: 1em 1.5em;
+}
+
+i {
+  margin: 0 6px;
+}
+
+.panel {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#43ced1), color-stop(#39c5c8), color-stop(#2ebbbe), color-stop(#22b2b5), to(#11a9ac));
+  background-image: linear-gradient(to left top, #43ced1, #39c5c8, #2ebbbe, #22b2b5, #11a9ac);
+  padding: 40px 1rem 97px 1rem;
+  font-size: 21px;
+  color: white;
+}
+
+.panel p {
+  margin-bottom: 0;
+}
+
+.dataQuestionLength {
+  font-size: 65px;
+  line-height: 1.1;
+}
+
+.dataQuestionLength i {
+  font-size: 26px;
+}
+
+.dataQuestionLength p {
+  font-size: 16px;
+  opacity: .9;
+}
+
+.cardQuestion {
+  position: absolute;
+  top: -57px;
 }
 
 .question {
@@ -745,6 +862,7 @@ body {
           justify-content: left;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  cursor: pointer;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;

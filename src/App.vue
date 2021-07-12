@@ -1,10 +1,10 @@
 <template>
   <div id="app">
+      <Panel/>
     <b-container fluid="md">
-      <Panel />
       <Question />
-      <Footer />
     </b-container>
+      <Footer />
   </div>
 </template>
 

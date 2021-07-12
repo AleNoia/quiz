@@ -100,13 +100,13 @@ export default [
         ]
     },
     {
-        text: 'Quais são as cores do arco-íris?',
+        text: 'What are the colours of the rainbow?',
         answers:[
-            {text: 'Vermelho, laranja, amarelo, verde, azul, violeta', correct: true},
-            {text: 'Vermelho, preto, amarelo, verde, azul, violeta', correct: false},
-            {text: 'Vermelho, laranja, amarelo, verde, azul claro, violeta', correct: false},
-            {text: 'Vermelho, marrom, amarelo, verde, azul, violeta', correct: false},
-            {text: 'Branco, laranja, amarelo, verde, azul, violeta', correct: false},
+            {text: 'Red, orange, yellow, green, blue, violet', correct: true},
+            {text: 'Red, black, yellow, green, blue, violet', correct: false},
+            {text: 'Red, orange, yellow, green, light blue, violet', correct: false},
+            {text: 'Red, brown, yellow, green, blue, violet', correct: false},
+            {text: 'White, orange, yellow, green, blue, violet', correct: false},
         ]
     },
 ]

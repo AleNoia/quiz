@@ -10,6 +10,7 @@ footer {
     padding: 3em;
     box-shadow: $shadow-1;
     background-color: white;
+    margin-top: 6%;
 
     span {
         color: white;
@@ -22,9 +23,6 @@ footer {
     a {
         text-decoration: underline;
 
-        &:hover {
-            color: $color-2;
-        }
     }
 
     p {
@@ -35,9 +33,4 @@ footer {
         @include is-flex(center, flex-start);
     }
 
-    .btn-footer {
-        background-color: $color-2;
-        margin-right: .8em;
-        border-radius: 10px;
-    }
 }

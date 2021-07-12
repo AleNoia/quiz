@@ -806,16 +806,47 @@ i {
   margin-bottom: 0;
 }
 
-.dataQuestionLength {
+.panel .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.panel .clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 140px;
+}
+
+.panel .clock i {
+  font-size: 26px;
+}
+
+.panel .dataQuestionLength {
   font-size: 65px;
   line-height: 1.1;
 }
 
-.dataQuestionLength i {
+.panel .dataQuestionLength i {
   font-size: 26px;
 }
 
-.dataQuestionLength p {
+.panel .dataQuestionLength p {
   font-size: 16px;
   opacity: .9;
 }

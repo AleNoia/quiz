@@ -36,19 +36,37 @@ i {
     p{
         margin-bottom: 0;
     }
+
+    .content{
+        @include is-flex(center, space-between);
+        width: 100%;
+    }
+
+    .clock{
+        // @include is-flex(center,center);
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 1em;
+        background-color: hsla(0, 0%, 0%, 0.1);
+        border-radius: 10px;
+        width: 140px;
+        i{
+            font-size: 26px;
+        }
+    }
+    .dataQuestionLength{
+        font-size: 65px;
+        line-height: 1.1;
+        i{
+            font-size: 26px;
+        }
+        p{
+            font-size: 16px;
+            opacity: .9;
+        }
+    }
 }
 
-.dataQuestionLength{
-    font-size: 65px;
-    line-height: 1.1;
-    i{
-        font-size: 26px;
-    }
-    p{
-        font-size: 16px;
-        opacity: .9;
-    }
-}
 
 // ======================================== Question
 @mixin hoverAnswer {

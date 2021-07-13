@@ -33,34 +33,38 @@ i {
     padding: 40px 1rem 97px 1rem;
     font-size: 21px;
     color: white;
-    p{
+
+    p {
         margin-bottom: 0;
     }
 
-    .content{
+    .content {
         @include is-flex(center, space-between);
         width: 100%;
     }
 
-    .clock{
-        // @include is-flex(center,center);
+    .clock {
         display: flex;
         flex-wrap: nowrap;
         padding: 1em;
         background-color: hsla(0, 0%, 0%, 0.1);
         border-radius: 10px;
         width: 140px;
-        i{
+
+        i {
             font-size: 26px;
         }
     }
-    .dataQuestionLength{
+
+    .dataQuestionLength {
         font-size: 65px;
         line-height: 1.1;
-        i{
+
+        i {
             font-size: 26px;
         }
-        p{
+
+        p {
             font-size: 16px;
             opacity: .9;
         }
@@ -70,8 +74,8 @@ i {
 
 // ======================================== Question
 @mixin hoverAnswer {
-    background-image: $gradient-1 !important;
-    color: white !important;
+    background-image: $gradient-1;
+    color: white;
 
     span {
         background-color: $color-3;
@@ -79,7 +83,17 @@ i {
     }
 }
 
-.cardQuestion{
+.correctAnswerClass {
+    background-image: $gradient-3 !important;
+    color: white !important;
+
+    span {
+        background-color: hsla(0, 0%, 0%, 0.2) !important;
+        box-shadow: $shadow-5;
+    }
+}
+
+.cardQuestion {
     position: absolute;
     top: -57px;
 }

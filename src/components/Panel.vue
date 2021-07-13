@@ -3,7 +3,7 @@
     <b-container fluid="md" class="is-flex">
       <div class="content">
         <div class="is-flex">
-          <div class="dataQuestionLength mr-2">
+          <div class="dataQuestionLength mr-1">
             <div>
               <span>{{ dataQuestionsLength }}</span>
               <i class="fas fa-list-ul"></i>
@@ -51,7 +51,7 @@
       }
     },
     created() {
-      
+
       eventBus.$on('dataAnswer', (data) => {
         if (data === true) this.correctAnswers.push(data);
         if (data === false) this.incorrectAnswers.push(data);

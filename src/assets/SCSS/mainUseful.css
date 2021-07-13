@@ -851,6 +851,18 @@ i {
   opacity: .9;
 }
 
+.correctAnswerClass {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#4ce16c), color-stop(#43df63), color-stop(#39dd5a), color-stop(#2eda51), to(#20d847)) !important;
+  background-image: linear-gradient(to right top, #4ce16c, #43df63, #39dd5a, #2eda51, #20d847) !important;
+  color: white !important;
+}
+
+.correctAnswerClass span {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  -webkit-box-shadow: #00000029 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+          box-shadow: #00000029 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+}
+
 .cardQuestion {
   position: absolute;
   top: -57px;
@@ -870,9 +882,9 @@ i {
 }
 
 .answers input[type="radio"]:checked + .answer {
-  background-image: -webkit-gradient(linear, right bottom, left top, from(#43ced1), color-stop(#39c5c8), color-stop(#2ebbbe), color-stop(#22b2b5), to(#11a9ac)) !important;
-  background-image: linear-gradient(to left top, #43ced1, #39c5c8, #2ebbbe, #22b2b5, #11a9ac) !important;
-  color: white !important;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#43ced1), color-stop(#39c5c8), color-stop(#2ebbbe), color-stop(#22b2b5), to(#11a9ac));
+  background-image: linear-gradient(to left top, #43ced1, #39c5c8, #2ebbbe, #22b2b5, #11a9ac);
+  color: white;
 }
 
 .answers input[type="radio"]:checked + .answer span {
@@ -923,9 +935,9 @@ i {
 }
 
 .answer:hover {
-  background-image: -webkit-gradient(linear, right bottom, left top, from(#43ced1), color-stop(#39c5c8), color-stop(#2ebbbe), color-stop(#22b2b5), to(#11a9ac)) !important;
-  background-image: linear-gradient(to left top, #43ced1, #39c5c8, #2ebbbe, #22b2b5, #11a9ac) !important;
-  color: white !important;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#43ced1), color-stop(#39c5c8), color-stop(#2ebbbe), color-stop(#22b2b5), to(#11a9ac));
+  background-image: linear-gradient(to left top, #43ced1, #39c5c8, #2ebbbe, #22b2b5, #11a9ac);
+  color: white;
 }
 
 .answer:hover span {

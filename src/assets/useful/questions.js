@@ -64,9 +64,9 @@ export default [
         answers:[
             {text: 'Tesla', correct: true},
             {text: 'Microsft', correct: false},
-            {text: 'Apple', correct: true},
-            {text: 'BMW', correct: true},
-            {text: 'Sony', correct: true},
+            {text: 'Apple', correct: false},
+            {text: 'BMW', correct: false},
+            {text: 'Sony', correct: false},
         ]
     },
     {

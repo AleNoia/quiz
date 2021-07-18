@@ -93,6 +93,10 @@ i {
     }
 }
 
+.pointEventNone {
+    pointer-events: none;
+}
+
 .cardQuestion {
     position: absolute;
     top: -57px;
@@ -150,4 +154,120 @@ i {
 
 .buttonGroup {
     @include is-flex(center, center)
+}
+
+
+// ======================================== Modal
+.modalComponent {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-image: $gradient-1;
+
+    h1,
+    i {
+        color: white;
+    }
+
+    i {
+        font-size: 70px;
+    }
+}
+
+.start {
+    @include is-flex(center, center);
+}
+
+.result {
+    padding: 40px 1rem;
+
+    .content {
+        @include is-flex-column(center, center);
+    }
+}
+
+.groupComponent {
+    width: 100%;
+    @include is-flex(center, center);
+}
+
+.component {
+    @include is-flex(center, center);
+    margin-right: .5em;
+    background-color: hsla(0, 0%, 0%, 0.2);
+    color: white;
+    padding: 1em;
+    width: 25%;
+    border-radius: 10px;
+    line-height: 1.1;
+
+    p {
+        margin: 0;
+        opacity: .9;
+    }
+
+    span {
+        font-size: 50px;
+    }
+
+    i {
+        opacity: .8;
+        font-size: 55px;
+    }
+}
+
+.percentage{
+    color: white;
+    span{
+        font-size: 120px;
+    }
+    p{
+        margin: 0;
+        width: min-content;
+        opacity: .9;
+    }
+    .simbolPercentage{
+        font-size: 50px;
+        opacity: .9;
+    }
+    .value{
+        margin-right: .2em;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        -webkit-transform: translateX(100vw);
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleOut {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw);
+        opacity: 1;
+    }
+}
+
+.scale-enter-active {
+    animation: scaleIn 0.6s ease;
+}
+
+.scale-leave-active {
+    animation: scaleOut 0.6s ease;
 }

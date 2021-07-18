@@ -9,11 +9,11 @@
     padding: 0 1.7em;
     cursor: pointer;
     font-size: 14px;
-    border: none;
+    border: none !important;
     border-radius: 10px;
     transition: $transition-1;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: $shadow-1;
+    box-shadow: $shadow-2 !important;
     color: #fff;
 
     i {
@@ -21,13 +21,19 @@
     }
 }
 
-.answerBtn {
+.primaryBtn {
     background-image: $gradient-1;
-    border: none !important;
-    box-shadow: $shadow-2 !important;
 
     &:hover {
         background-image: $gradient-2 !important;
+    }
+}
+.secondaryBtn {
+    background-image: $gradient-3;
+    padding: 0 2.5em !important;
+
+    &:hover {
+        background-image: $gradient-4 !important;
     }
 }
 

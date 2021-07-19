@@ -1,5 +1,5 @@
 <h1 align="center">
-   ⚖️ Quiz
+   🧐 Quiz
 </h1>
 
 <p align="center">
@@ -18,6 +18,7 @@ A quiz implemented with Vue.js
 * 💡 [Features](#features)
 * 🎯 [Purpose](#Purpose)
 * 🛠 [Installation](#Installation)
+* 📷 [Prints](#Prints)
 * 🤝 [Contributing](#Contributing) 
 * ⚙ [Technologies Used](#TechnologiesUsed)
 * 👋 [Author](#Author)
@@ -30,6 +31,7 @@ A quiz implemented with Vue.js
 * 📊A control panel
   * ⏲ A stopwatch
   * 📈 Number of correct and wrong answers
+* 📱 Responsive
 
 ***
 
@@ -89,7 +91,18 @@ npm run lint
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+# <a name="Prints"></a>📷 Prints
+![image](https://user-images.githubusercontent.com/82424777/126180123-1501377a-de49-457f-b108-09ec5e943d95.png)
+![image](https://user-images.githubusercontent.com/82424777/126180150-b5a4257c-ca16-4e58-b27c-b7dd920b00d7.png)
+![image](https://user-images.githubusercontent.com/82424777/126180404-72953975-1be8-4372-9586-0b66a4122ff8.png)
 
+<div align="center">
+   
+![image](https://user-images.githubusercontent.com/82424777/126181651-41f493c2-8cd0-464c-9252-9d5e59cf02da.png)
+![image](https://user-images.githubusercontent.com/82424777/126181576-e610e392-1d09-4b7c-8643-50197e998c75.png)
+![image](https://user-images.githubusercontent.com/82424777/126181735-a168c166-7b8d-4b73-aefe-0aac89104269.png)
+   
+</div>
 
 ***
 # <a name="TechnologiesUsed"></a> ⚙ Technologies used

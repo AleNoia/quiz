@@ -93,65 +93,6 @@ table {
           justify-content: center;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-[class*="grid-"] {
-  float: left;
-  margin-bottom: 20px;
-  padding: 0 1%;
-}
-
-.grid-1 {
-  width: 8.33333%;
-}
-
-.grid-2 {
-  width: 16.66667%;
-}
-
-.grid-3 {
-  width: 25%;
-}
-
-.grid-4 {
-  width: 33.33333%;
-}
-
-.grid-5 {
-  width: 41.66667%;
-}
-
-.grid-6 {
-  width: 50%;
-}
-
-.grid-7 {
-  width: 58.33333%;
-}
-
-.grid-8 {
-  width: 66.66667%;
-}
-
-.grid-9 {
-  width: 75%;
-}
-
-.grid-10 {
-  width: 83.33333%;
-}
-
-.grid-11 {
-  width: 91.66667%;
-}
-
-.grid-12 {
-  width: 100%;
-}
-
 .m-0 {
   margin: 0em;
 }
@@ -871,8 +812,8 @@ i {
 
 .correctAnswerClass span {
   background-color: rgba(0, 0, 0, 0.2) !important;
-  -webkit-box-shadow: #00000029 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
-          box-shadow: #00000029 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+  -webkit-box-shadow: #00000029 0px 3px 6px, rgba(189, 177, 177, 0.1) 0px 3px 6px;
+          box-shadow: #00000029 0px 3px 6px, rgba(189, 177, 177, 0.1) 0px 3px 6px;
 }
 
 .pointEventNone {
@@ -905,8 +846,8 @@ i {
 
 .answers input[type="radio"]:checked + .answer span {
   background-color: #01C6CA;
-  -webkit-box-shadow: #00000029 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
-          box-shadow: #00000029 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+  -webkit-box-shadow: #00000029 0px 3px 6px, rgba(189, 177, 177, 0.1) 0px 3px 6px;
+          box-shadow: #00000029 0px 3px 6px, rgba(189, 177, 177, 0.1) 0px 3px 6px;
 }
 
 .answer {
@@ -958,8 +899,8 @@ i {
 
 .answer:hover span {
   background-color: #01C6CA;
-  -webkit-box-shadow: #00000029 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
-          box-shadow: #00000029 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+  -webkit-box-shadow: #00000029 0px 3px 6px, rgba(189, 177, 177, 0.1) 0px 3px 6px;
+          box-shadow: #00000029 0px 3px 6px, rgba(189, 177, 177, 0.1) 0px 3px 6px;
 }
 
 .buttonGroup {
@@ -1101,6 +1042,31 @@ i {
 
 .percentage .value {
   margin-right: .2em;
+}
+
+@media screen and (max-width: 700px) {
+  .modalComponent {
+    overflow-y: scroll;
+  }
+  .groupComponent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .groupComponent .component {
+    width: 75%;
+    margin-bottom: 15px;
+  }
 }
 
 @-webkit-keyframes scaleIn {

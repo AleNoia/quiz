@@ -11,8 +11,8 @@
             <p>Questions</p>
           </div>
           <div class="is-flex-column">
-            <div><i class="fas fa-check-circle"></i>{{ correctAnswers.length }}</div>
-            <div><i class="fas fa-times-circle"></i>{{ incorrectAnswers.length }}</div>
+            <div class="correctData"><i class="fas fa-check-circle"></i>{{ correctAnswers.length }}</div>
+            <div class="correctData"><i class="fas fa-times-circle"></i>{{ incorrectAnswers.length }}</div>
           </div>
         </div>
         <div class="clock">
@@ -33,16 +33,30 @@
         correctAnswers: [],
         incorrectAnswers: [],
         dataQuestionsLength: 0,
-        remaining: undefined,
+        remaining: Number,
         time: undefined,
         start: false,
         chronometer: '0:00',
+        restart: false,
       }
     },
     methods: {
       // Acrescenta um zero antes do números se for menor que 10
       checkTime(i) {
         return (i < 10) ? "0" + i : i;
+      },
+
+      // Inicia a contagem
+      startClock() {  
+        this.time = (this.dataQuestionsLength * 1000) * 60 //Para cada questão haverá um minuto
+        let loop =setInterval(() => {
+          this.clock()
+          this.time = this.time - 1000
+          if(this.time === -1000 || this.restart === true) {
+            clearInterval(loop);
+            this.restart = false;
+          }
+        }, 1000)
       },
 
       // Insere a hora formatada na variável
@@ -52,18 +66,9 @@
         let s = this.checkTime(date.getSeconds());
         this.chronometer = `${m}:${s}`
       },
-
-      // Inicia a contagem
-      startClock() {
-        this.time = (this.dataQuestionsLength * 1000) * 60
-        setInterval(() => {
-          this.clock()
-          this.time = this.time - 1000
-        }, 1000)
-      }
     },
     watch: {
-      // Se o chronometer chegar a zero ele irá chamar os resultados
+      // Se o chronometer chegar a zero ou nao faltar mais questoes ele irá chamar os resultados
       time() {
         if (this.time === -1000 || this.remaining === 1) {
           eventBus.$emit('showResults', {
@@ -71,13 +76,13 @@
             'incorrectAnswers': this.incorrectAnswers,
             'dataQuestionsLength': this.dataQuestionsLength
           })
+          this.time = 10;
+          this.remaining = 10;
         }
-        this.time = 10;
-        this.remaining = 0;
       }
     },
     created() {
-      // Recebe a respota sendo verdadeira ou falsa 
+      // Recebe a resposta sendo verdadeira ou falsa 
       eventBus.$on('dataAnswer', (data) => {
         if (data.correct === true) this.correctAnswers.push(data.correct);
         if (data.correct === false) this.incorrectAnswers.push(data.correct);
@@ -100,6 +105,8 @@
         if (data) {
           this.correctAnswers = [];
           this.incorrectAnswers = [];
+          this.startClock()
+          this.restart = true;
         }
       })
     }

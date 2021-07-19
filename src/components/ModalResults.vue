@@ -50,24 +50,26 @@
             }
         },
         methods:{
+            // Reiniciando app
             restart(){
                 eventBus.$emit('restartApp', true)
                 this.show = false;
             }
         },
         computed: {
+            // Porcentagem de acertos
             percentage(){
                 let result = (this.correctAnswers * 100)/this.dataQuestionsLength
                 return result.toFixed(0)
             }
         },
         created() {
+            // Mostrando resutados
             eventBus.$on('showResults', (data) => {
                 this.show = true
                 this.correctAnswers = data.correctAnswers.length;
                 this.incorrectAnswers = data.incorrectAnswers.length;
                 this.dataQuestionsLength = data.dataQuestionsLength
-                console.log('show')
             })
         }
     }

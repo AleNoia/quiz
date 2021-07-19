@@ -1,7 +1,6 @@
 <template>
 
     <b-card class="cardQuestion">
-
         <b-card-text class="header">
             Question <span>{{ questionIndex }}</span> • <span>{{ remaining - 1 }}</span> remaining
         </b-card-text>
@@ -27,7 +26,6 @@
             </b-button>
             <b-button class="primaryBtn" @click="answer" :disabled="remaining === 0">Answer</b-button>
         </div>
-
     </b-card>
 
 </template>
@@ -66,14 +64,14 @@
 
             // Generating the questions
             generateQuestion() {
-                this.arrayQuestions = this.shuffle(Questions);
-                this.insertQuestion(this.arrayQuestions)
+                this.arrayQuestions = JSON.parse(JSON.stringify(this.shuffle(Questions)))
+                this.insertQuestion()
             },
 
             //Skip to next question and insert the text and the answers
-            insertQuestion(array) {
-                this.questionText = array[0].text
-                this.answers = this.shuffle(array[0].answers)
+            insertQuestion() {
+                this.questionText = this.arrayQuestions[0].text
+                this.answers = this.shuffle(this.arrayQuestions[0].answers)
             },
 
             // Verificando qual é a resposta correta
@@ -108,7 +106,10 @@
                     });
                 }
 
-                eventBus.$emit('dataAnswer', {'correct': correct, 'remaining': this.remaining})
+                eventBus.$emit('dataAnswer', {
+                    'correct': correct,
+                    'remaining': this.remaining
+                })
                 this.optionSelected = undefined;
                 correct = undefined;
                 this.correctAnswer = undefined;
@@ -116,7 +117,7 @@
                     this.questionIndex += 1;
                     this.remaining = this.remaining - 1
                     this.arrayQuestions.splice(0, 1);
-                    this.insertQuestion(this.arrayQuestions);
+                    this.insertQuestion();
                 }, 3500)
 
             },
@@ -124,7 +125,7 @@
             // Answer later
             answerLater() {
                 this.arrayQuestions.push(this.arrayQuestions.splice(0, 1)[0]);
-                this.insertQuestion(this.arrayQuestions);
+                this.insertQuestion();
             },
 
         },
@@ -133,26 +134,22 @@
             // Generating question on startup
             this.generateQuestion();
 
+            // O restante das respostas receberá a quantidade de questões
             this.remaining = this.arrayQuestions.length
 
             eventBus.$emit('dataQuestions', this.arrayQuestions.length)
 
+            // Verificando qual respota é a correta
             this.checkCorrectAnswer()
 
             // Reiniciando app
             eventBus.$on('restartApp', (data) => {
-                if(data){
-                    this.generateQuestion();
+                if (data) {
+                    this.generateQuestion()
+                    this.questionIndex = 1;
+                    this.remaining = this.arrayQuestions.length;
                 }
             })
-        },
-
-        watch: {
-            // questionIndex(){
-            //     if(this.questionIndex === 11) {
-            //         // this.questionIndex = 10
-            //     }
-            // }
         },
     }
 </script>

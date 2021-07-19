@@ -35,7 +35,7 @@ A quiz implemented with Vue.js
 
 # <a name="Purpose"></a>🎯 Purpose
 
-My purpose with this project is to learn more about Vue.js, SCSS and UI/UX design.
+My purpose with this project is to learn about animation and more about Vue.js, SCSS and UI/UX design.
 
 ***
 

@@ -90,7 +90,7 @@
                 if (this.optionSelected == true) {
                     correct = true
                 } else if (this.optionSelected == undefined) {
-                    alert('responda')
+                    alert('Select any alternative')
                     return
                 } else {
                     correct = false

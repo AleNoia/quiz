@@ -23,6 +23,6 @@
                 this.show = false
                 eventBus.$emit('startQuiz', true)
             }
-        }
+        },
     }
 </script>

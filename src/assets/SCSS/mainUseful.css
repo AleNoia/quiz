@@ -1155,50 +1155,6 @@ i {
   }
 }
 
-@-webkit-keyframes slideIn {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
-
-@-webkit-keyframes slideOut {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
-
 .scale-enter-active {
   -webkit-animation: scaleIn 0.6s ease;
           animation: scaleIn 0.6s ease;
@@ -1207,15 +1163,5 @@ i {
 .scale-leave-active {
   -webkit-animation: scaleOut 0.6s ease;
           animation: scaleOut 0.6s ease;
-}
-
-.slide-enter-active {
-  -webkit-animation: slideIn 0.6s ease;
-          animation: slideIn 0.6s ease;
-}
-
-.slide-leave-active {
-  -webkit-animation: slideOut 0.6s ease;
-          animation: slideOut 0.6s ease;
 }
 /*# sourceMappingURL=mainUseful.css.map */

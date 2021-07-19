@@ -93,7 +93,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # <a name="Prints"></a>📷 Prints
 ![image](https://user-images.githubusercontent.com/82424777/126180123-1501377a-de49-457f-b108-09ec5e943d95.png)
-![image](https://user-images.githubusercontent.com/82424777/126180150-b5a4257c-ca16-4e58-b27c-b7dd920b00d7.png)
+![image](https://user-images.githubusercontent.com/82424777/126182660-7ae9cd82-cd85-4b25-9b6f-de033e3db1c9.png)
 ![image](https://user-images.githubusercontent.com/82424777/126180404-72953975-1be8-4372-9586-0b66a4122ff8.png)
 
 <div align="center">

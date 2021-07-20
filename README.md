@@ -52,9 +52,6 @@ Run this command to clone the repository:
 git clone https://github.com/AleNoia/quiz.git
 
 ```
-
-### 🎲 Runnig
-
 #### Project setup
 
 ```
@@ -62,6 +59,8 @@ git clone https://github.com/AleNoia/quiz.git
 npm install
 
 ```
+
+### 🎲 Runnig
 
 #### Compiles and hot-reloads for development
 
